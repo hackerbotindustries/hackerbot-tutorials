@@ -1,5 +1,5 @@
-ultralytics[export]
-hackerbot
+picamera[array]
 face-recognition
 imutils
-picamera[array]
+numpy
+opencv-python
