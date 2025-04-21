@@ -1,2 +1,5 @@
 ultralytics[export]
 hackerbot
+face-recognition
+imutils
+picamera[array]
