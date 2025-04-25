@@ -1,0 +1,5 @@
+picamera[array]
+face-recognition
+imutils
+numpy
+opencv-python
