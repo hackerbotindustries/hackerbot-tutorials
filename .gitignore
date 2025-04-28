@@ -134,3 +134,6 @@ secrets.yaml
 # Docker
 *.dockerfile
 docker-compose.override.yml
+
+# Large model files
+models/
