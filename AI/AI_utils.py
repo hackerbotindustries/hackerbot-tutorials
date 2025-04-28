@@ -4,10 +4,7 @@ import speech_recognition as sr
 from hackerbot_actions import *
 import threading
 
-
-recognizer = sr.Recognizer()
-
-def listen_to_user():
+def listen_to_user(recognizer):
     """Capture microphone input and convert it to text."""
     with sr.Microphone() as source:
         print("Listening...")
@@ -24,7 +21,7 @@ def listen_to_user():
         return 
     
 
-def handle_response(response_text):
+def handle_response(bot, response_text):
     try:
         response_json = json.loads(response_text)
         print("Received JSON response:", response_json)
@@ -33,14 +30,14 @@ def handle_response(response_text):
                 action = action_obj.get("action")
                 parameters = action_obj.get("parameters", {})
                 if action:
-                    execute_robot_action(action, parameters)
+                    execute_robot_action(bot, action, parameters)
                 else:
                     print("One action object does not contain 'action'.")
         else:
             action = response_json.get("action")
             parameters = response_json.get("parameters", {})
             if action:
-                execute_robot_action(action, parameters)
+                execute_robot_action(bot, action, parameters)
             else:
                 print("JSON response does not contain 'action'.")
     except json.JSONDecodeError:
