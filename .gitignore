@@ -137,3 +137,5 @@ docker-compose.override.yml
 
 # Large model files
 models/
+*.onnx
+*.onnx.josn
