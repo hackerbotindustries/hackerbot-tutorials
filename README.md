@@ -65,17 +65,8 @@ wget https://huggingface.co/.../en_GB-semaine-medium.onnx.json
 bot.head.speak(model_src="/path/to/model", text="Hello world", speaker_id=None)
 ```
 
-### 🤾 Arm & Gripper Control
+### 🤾 Human Robot Interaction
 
-```python
-from hackerbot import Hackerbot
-
-bot = Hackerbot()
-
-bot.arm.move_joint(2, 45.0, speed=50)
-bot.arm.gripper.open()
-bot.arm.gripper.close()
-```
 
 ---
 

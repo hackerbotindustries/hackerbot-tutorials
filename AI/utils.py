@@ -1,8 +1,18 @@
 import os
 import json
 import speech_recognition as sr
-from hackerbot_actions import *
+from actions import *
 import threading
+import re
+
+def extract_json_from_response(response_text):
+    """Extract clean JSON from a possible markdown-wrapped response."""
+    if response_text.startswith("```"):
+        # Remove triple backticks and optional "json" marker
+        response_text = re.sub(r"^```(?:json)?\n?", "", response_text)
+        response_text = re.sub(r"\n?```$", "", response_text)
+    return response_text.strip()
+
 
 def listen_to_user(recognizer):
     """Capture microphone input and convert it to text."""
@@ -63,6 +73,7 @@ def execute_robot_action(bot, action, parameters):
         if action == "speak":
             # Run speaking in a separate thread
             threading.Thread(target=func).start()
+            time.sleep(2)
         else:
             # Movements happen normally (you can also thread them if you want simultaneous moves)
             func()
