@@ -28,19 +28,6 @@ hackerbot-tutorials/
 
 ## 🚀 Quick Start
 
-### 📍 Base Movement
-
-```bash
-cd movement
-python3 base_movement.py
-```
-
-### 🧠 SLAM Navigation
-
-```bash
-cd movement
-python3 slam_navigation.py
-```
 
 ### 👁️ Vision Setup
 
