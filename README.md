@@ -65,7 +65,8 @@ wget https://huggingface.co/.../en_GB-semaine-medium.onnx.json
 bot.head.speak(model_src="/path/to/model", text="Hello world", speaker_id=None)
 ```
 
-### 🤾 Human Robot Interaction
+## 🤾 Deploy AI in Hackerbot
+
 
 
 ---

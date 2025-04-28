@@ -2,6 +2,7 @@ from hackerbot import Hackerbot
 import time
 
 # ====== ACTIONS ======
+# Add new actions here
 
 def shake_head(bot):
     bot.head.look(180, 180, 70)
@@ -43,11 +44,11 @@ def spin_left(bot):
 
 def spin_around(bot):
     bot.base.drive(0, 130)
-
+            
 def speak(bot, text):
     bot.head.speak(model_src="../models/en_GB-semaine-medium.onnx", text=text, speaker_id=2)
 
-
+# Test your actions here
 def main():
     bot = Hackerbot(verbose_mode=True)
     shake_head(bot)
