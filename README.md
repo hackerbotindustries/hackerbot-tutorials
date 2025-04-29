@@ -67,7 +67,13 @@ bot.head.speak(model_src="/path/to/model", text="Hello world", speaker_id=None)
 
 ## 🤾 Deploy AI in Hackerbot
 
+1. Configure Gemini API key and put in the .env file
 
+2. Run the example
+```bash
+cd AI
+python3 speak_w_gemini.py
+```
 
 ---
 
