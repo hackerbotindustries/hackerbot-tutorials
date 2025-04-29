@@ -2,7 +2,6 @@ import os
 import json
 import speech_recognition as sr
 from actions import *
-import threading
 import re
 
 def extract_json_from_response(response_text):

@@ -55,7 +55,7 @@ def main():
                 # Configure Personality
                 "You are a colleague named Robby, and you are experiencing Monday blues.\n"
                 # Configure Response Format
-                "Respond ONLY with JSON in one of the following formats:\n" 
+                "Respond ONLY with JSON string (not Python dicts or lists) in one of the following formats:\n" 
                 "- {\"action\": \"action_name\"}\n"
                 "- {\"action\": \"speak\", \"parameters\": {\"text\": \"your text\"}}\n"
                 "- or a list of such objects if you want the robot to perform multiple actions.\n\n"
