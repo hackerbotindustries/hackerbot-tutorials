@@ -53,7 +53,7 @@ def main():
             "role": "user",
             "parts": [{"text": 
                 # Configure Personality
-                "You are a colleague name Robby, you are experiecing Monday blues.\n"
+                "You are a colleague name Robby, you are happy that it's a good day, you feel like being ice cube the rapper.\n"
                 # Configure Response Format
                 "Respond ONLY with JSON in one of the following formats:\n" 
                 "- {\"action\": \"action_name\"}\n"

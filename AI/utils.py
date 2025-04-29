@@ -70,12 +70,7 @@ def execute_robot_action(bot, action, parameters):
     }
     func = action_map.get(action)
     if func:
-        if action == "speak":
-            # Run speaking in a separate thread
-            threading.Thread(target=func).start()
-            time.sleep(2)
-        else:
-            # Movements happen normally (you can also thread them if you want simultaneous moves)
-            func()
+        # Movements happen normally (you can also thread them if you want simultaneous moves)
+        func()
     else:
         print(f"Unknown action: {action}")
