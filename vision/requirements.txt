@@ -3,3 +3,4 @@ face-recognition
 imutils
 numpy
 opencv-python
+ultralytics
