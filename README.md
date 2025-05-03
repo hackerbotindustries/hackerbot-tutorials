@@ -28,19 +28,6 @@ hackerbot-tutorials/
 
 ## 🚀 Quick Start
 
-### 📍 Base Movement
-
-```bash
-cd movement
-python3 base_movement.py
-```
-
-### 🧠 SLAM Navigation
-
-```bash
-cd movement
-python3 slam_navigation.py
-```
 
 ### 👁️ Vision Setup
 
@@ -78,16 +65,14 @@ wget https://huggingface.co/.../en_GB-semaine-medium.onnx.json
 bot.head.speak(model_src="/path/to/model", text="Hello world", speaker_id=None)
 ```
 
-### 🤾 Arm & Gripper Control
+## 🤾 Deploy AI in Hackerbot
 
-```python
-from hackerbot import Hackerbot
+1. Configure Gemini API key and put in the .env file
 
-bot = Hackerbot()
-
-bot.arm.move_joint(2, 45.0, speed=50)
-bot.arm.gripper.open()
-bot.arm.gripper.close()
+2. Run the example
+```bash
+cd AI
+python3 speak_w_gemini.py
 ```
 
 ---

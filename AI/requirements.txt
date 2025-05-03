@@ -1,0 +1,4 @@
+SpeechRecognition
+google-generativeai
+hackerbot
+python-dotenv
