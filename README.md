@@ -14,18 +14,6 @@ Before using these tutorials, make sure:
 
 ---
 
-## 📂 Repository Structure
-
-```
-hackerbot-tutorials/
-├── vision/
-│   ├── image_rec/          # YOLO-based object recognition
-│   └── face_rec/           # Face recognition & head tracking
-└── requirements.txt        # Vision-related Python dependencies
-```
-
----
-
 ## 🚀 Quick Start
 
 
@@ -54,15 +42,9 @@ python3 facial_req.py
 
 ### 🗣️ Voice (Text to Speech)
 
-1. Download Piper TTS model and config:
-```bash
-wget https://huggingface.co/.../en_GB-semaine-medium.onnx
-wget https://huggingface.co/.../en_GB-semaine-medium.onnx.json
-```
-
-2. Example usage in Python:
+1. Example usage in Python:
 ```python
-bot.head.speak(model_src="/path/to/model", text="Hello world", speaker_id=None)
+bot.base.speak(model_src="en_GB-semaine-medium", text="Hello world", speaker_id=None)
 ```
 
 ## 🤾 Deploy AI in Hackerbot
