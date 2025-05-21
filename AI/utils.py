@@ -12,23 +12,21 @@ def extract_json_from_response(response_text):
         response_text = re.sub(r"\n?```$", "", response_text)
     return response_text.strip()
 
-
 def listen_to_user(recognizer):
-    """Capture microphone input and convert it to text."""
-    with sr.Microphone() as source:
-        print("Listening...")
-        audio = recognizer.listen(source)
     try:
+        with sr.Microphone() as source:
+            recognizer.adjust_for_ambient_noise(source)
+            print("Listening...")
+            audio = recognizer.listen(source)
         text = recognizer.recognize_google(audio)
         print(f"You said: {text}")
-        return text
+        return text, None
     except sr.UnknownValueError:
-        print("Sorry, I could not understand audio.")
-        return None
+        return None, "Speech was unintelligible."
     except sr.RequestError as e:
-        print(f"Could not request results; {e}")
-        return 
-    
+        return None, f"API request failed: {e}"
+    except Exception as e:
+        return None, f"Unexpected error: {e}"
 
 def handle_response(bot, response_text):
     try:
