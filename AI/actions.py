@@ -46,7 +46,7 @@ def spin_around(bot):
     bot.base.drive(0, 130)
             
 def speak(bot, text):
-    bot.head.speak(model_src="../models/en_GB-semaine-medium.onnx", text=text, speaker_id=2)
+    bot.base.speak(model_src="en_GB-semaine-medium", text=text, speaker_id=None)
 
 # Test your actions here
 def main():
